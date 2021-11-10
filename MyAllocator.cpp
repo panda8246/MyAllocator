@@ -40,7 +40,7 @@ public:
 	//分配内存
 	Pointer allocate(SizeType n)
 	{	
-		count += n;
+		count = n;
 		std::cout << "管老子要内存来了？  ======>  " << count << std::endl;
 		g_memory_used.fetch_add(n * sizeof(T));
 		return (Base::allocate(n));
